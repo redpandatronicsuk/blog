@@ -1,0 +1,204 @@
+/*****************************************************************************/
+/*
+/* Common
+/*
+/*****************************************************************************/
+/* Global Reset */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/dobe\/Repositories\/blog\/app\/blog\/_scss\/main\.scss}line{font-family:\000038}}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/dobe\/Repositories\/blog\/app\/blog\/_scss\/main\.scss}line{font-family:\0000313}}
+html, body {
+  height: 100%;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/dobe\/Repositories\/blog\/app\/blog\/_scss\/main\.scss}line{font-family:\0000315}}
+body {
+  background-color: #FFF;
+  font: 13.34px Helvetica, Arial, sans-serif;
+  font-size: small;
+  text-align: center;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/dobe\/Repositories\/blog\/app\/blog\/_scss\/main\.scss}line{font-family:\0000322}}
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/dobe\/Repositories\/blog\/app\/blog\/_scss\/main\.scss}line{font-family:\0000325}}
+h1 {
+  margin-bottom: 1em;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/dobe\/Repositories\/blog\/app\/blog\/_scss\/main\.scss}line{font-family:\0000326}}
+p {
+  margin: 1em 0;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/dobe\/Repositories\/blog\/app\/blog\/_scss\/main\.scss}line{font-family:\0000328}}
+a {
+  color: #00a;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/dobe\/Repositories\/blog\/app\/blog\/_scss\/main\.scss}line{font-family:\0000329}}
+a:hover {
+  color: #000;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/dobe\/Repositories\/blog\/app\/blog\/_scss\/main\.scss}line{font-family:\0000330}}
+a:visited {
+  color: #a0a;
+}
+
+/*****************************************************************************/
+/*
+/* Home
+/*
+/*****************************************************************************/
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/dobe\/Repositories\/blog\/app\/blog\/_scss\/main\.scss}line{font-family:\0000337}}
+.posts {
+  list-style-type: none;
+  margin-bottom: 2em;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/dobe\/Repositories\/blog\/app\/blog\/_scss\/main\.scss}line{font-family:\0000342}}
+.posts li {
+  line-height: 1.75em;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/dobe\/Repositories\/blog\/app\/blog\/_scss\/main\.scss}line{font-family:\0000346}}
+.posts span {
+  color: #aaa;
+  font-family: Monaco, "Courier New", monospace;
+  font-size: 80%;
+}
+
+/*****************************************************************************/
+/*
+/* Site
+/*
+/*****************************************************************************/
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/dobe\/Repositories\/blog\/app\/blog\/_scss\/main\.scss}line{font-family:\0000358}}
+.site {
+  font-size: 115%;
+  text-align: justify;
+  width: 42em;
+  margin: 3em auto 2em;
+  line-height: 1.5em;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/dobe\/Repositories\/blog\/app\/blog\/_scss\/main\.scss}line{font-family:\0000366}}
+.header a {
+  font-weight: bold;
+  text-decoration: none;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/dobe\/Repositories\/blog\/app\/blog\/_scss\/main\.scss}line{font-family:\0000371}}
+.title {
+  display: inline-block;
+  margin-bottom: 2em;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/dobe\/Repositories\/blog\/app\/blog\/_scss\/main\.scss}line{font-family:\0000376}}
+.title a {
+  color: #a00;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/dobe\/Repositories\/blog\/app\/blog\/_scss\/main\.scss}line{font-family:\0000380}}
+.title a:hover {
+  color: #000;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/dobe\/Repositories\/blog\/app\/blog\/_scss\/main\.scss}line{font-family:\0000384}}
+.header a.extra {
+  color: #aaa;
+  margin-left: 1em;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/dobe\/Repositories\/blog\/app\/blog\/_scss\/main\.scss}line{font-family:\0000389}}
+.header a.extra:hover {
+  color: #000;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/dobe\/Repositories\/blog\/app\/blog\/_scss\/main\.scss}line{font-family:\0000393}}
+.meta {
+  color: #aaa;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/dobe\/Repositories\/blog\/app\/blog\/_scss\/main\.scss}line{font-family:\0000397}}
+.footer {
+  font-size: 80%;
+  color: #666;
+  border-top: 4px solid #eee;
+  margin-top: 2em;
+  overflow: hidden;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/dobe\/Repositories\/blog\/app\/blog\/_scss\/main\.scss}line{font-family:\00003105}}
+.footer .contact {
+  float: left;
+  margin-right: 3em;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/dobe\/Repositories\/blog\/app\/blog\/_scss\/main\.scss}line{font-family:\00003110}}
+.footer .contact a {
+  color: #8085C1;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/dobe\/Repositories\/blog\/app\/blog\/_scss\/main\.scss}line{font-family:\00003114}}
+.footer .rss {
+  margin-top: 1.1em;
+  margin-right: -.2em;
+  float: right;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/dobe\/Repositories\/blog\/app\/blog\/_scss\/main\.scss}line{font-family:\00003120}}
+.footer .rss img {
+  border: 0;
+}
+
+/*****************************************************************************/
+/*
+/* Posts
+/*
+/*****************************************************************************/
+/* standard */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/dobe\/Repositories\/blog\/app\/blog\/_scss\/main\.scss}line{font-family:\00003131}}
+.post pre {
+  border: 1px solid #ddd;
+  background-color: #eef;
+  padding: 0 .4em;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/dobe\/Repositories\/blog\/app\/blog\/_scss\/main\.scss}line{font-family:\00003137}}
+.post ul, .post ol {
+  margin-left: 1.35em;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/dobe\/Repositories\/blog\/app\/blog\/_scss\/main\.scss}line{font-family:\00003141}}
+.post code {
+  border: 1px solid #ddd;
+  background-color: #eef;
+  padding: 0 .2em;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/dobe\/Repositories\/blog\/app\/blog\/_scss\/main\.scss}line{font-family:\00003147}}
+.post pre code {
+  border: none;
+}
+
+/* terminal */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/dobe\/Repositories\/blog\/app\/blog\/_scss\/main\.scss}line{font-family:\00003152}}
+.post pre.terminal {
+  border: 1px solid #000;
+  background-color: #333;
+  color: #FFF;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/dobe\/Repositories\/blog\/app\/blog\/_scss\/main\.scss}line{font-family:\00003158}}
+.post pre.terminal code {
+  background-color: #333;
+}

@@ -108,7 +108,7 @@ module.exports = function (grunt) {
         // require: ['singularity', 'jacket'],
         bundleExec: true,
         sassDir: '<%= yeoman.app %>/_scss',
-        cssDir: '.tmp/css',
+        cssDir: '<%= yeoman.app %>/css', //'.tmp/css',
         imagesDir: '<%= yeoman.app %>/img',
         javascriptsDir: '<%= yeoman.app %>/js',
         relativeAssets: false,
@@ -138,7 +138,7 @@ module.exports = function (grunt) {
           expand: true,
           cwd: '<%= yeoman.dist %>/css',
           src: '**/*.css',
-          dest: '<%= yeoman.dist %>/css'
+          dest: '<%= yeoman.dist %>/blog/css'
         }]
       },
       server: {
