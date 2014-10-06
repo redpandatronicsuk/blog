@@ -17,7 +17,7 @@ module.exports = function (grunt) {
   grunt.initConfig({
     // Configurable paths
     yeoman: {
-      app: 'app/blog',
+      app: 'app',
       dist: 'dist'
     },
     watch: {
@@ -108,7 +108,7 @@ module.exports = function (grunt) {
         // require: ['singularity', 'jacket'],
         bundleExec: true,
         sassDir: '<%= yeoman.app %>/_scss',
-        cssDir: '<%= yeoman.app %>/css', //'.tmp/css',
+        cssDir: '.tmp/css',
         imagesDir: '<%= yeoman.app %>/img',
         javascriptsDir: '<%= yeoman.app %>/js',
         relativeAssets: false,
@@ -138,7 +138,7 @@ module.exports = function (grunt) {
           expand: true,
           cwd: '<%= yeoman.dist %>/css',
           src: '**/*.css',
-          dest: '<%= yeoman.dist %>/blog/css'
+          dest: '<%= yeoman.dist %>/css'
         }]
       },
       server: {
