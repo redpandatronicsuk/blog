@@ -402,7 +402,7 @@ compass: {
     'filerev',
     'usemin',
     'htmlmin',
-    //'replace'
+    'replace'
     ]);
 
   grunt.registerTask('deploy', [
