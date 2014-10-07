@@ -381,7 +381,7 @@ compass: {
 
   grunt.registerTask('check', [
     'clean:server',
-    'jekyll:check',
+    //'jekyll:check',
     'compass:server',
     'jshint:all',
     'csslint:check'
@@ -402,7 +402,7 @@ compass: {
     'filerev',
     'usemin',
     'htmlmin',
-    'replace'
+    //'replace'
     ]);
 
   grunt.registerTask('deploy', [
