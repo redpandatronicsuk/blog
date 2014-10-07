@@ -22,20 +22,17 @@ module.exports = function (grunt) {
     },
     replace: {
       dist: {
-        options: {
-          patterns: [
-          {
-            match: 'href=/',
-            replacement: 'href=/blog/'
-          },
-          {
-            match: 'src=/',
-            replacement: 'src=/blog/'
-          }
-          ]
-        },
-        files: [
-        {expand: true, flatten: true, src: ['<%= yeoman.dist %>/index.html'], dest: '<%= yeoman.dist %>/'}
+        src: ['<%= yeoman.dist %>/index.html'],             // source files array (supports minimatch)
+        overwrite: true,
+        replacements: 
+        [
+        {
+           from: 'href=/',                   // string replacement
+           to: 'href=/blog/'
+         }, {
+          from: 'src=/', 
+          to: 'src=/blog/'
+        }
         ]
       }
     },
