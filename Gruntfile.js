@@ -30,6 +30,9 @@ module.exports = function (grunt) {
         tasks: ['copy:stageCss', 'autoprefixer:server']
       },
       jekyll: {
+        options: {
+          baseurl: ''
+        },
         files: [
           '<%= yeoman.app %>/**/*.{html,yml,md,mkd,markdown}',
           '!<%= yeoman.app %>/_bower_components/**/*'
