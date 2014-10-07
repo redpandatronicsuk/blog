@@ -20,6 +20,25 @@ module.exports = function (grunt) {
       app: 'app',
       dist: 'dist'
     },
+    replace: {
+      dist: {
+        options: {
+          patterns: [
+          {
+            match: 'href=/',
+            replacement: 'href=/blog/'
+          },
+          {
+            match: 'src=/',
+            replacement: 'src=/blog/'
+          }
+          ]
+        },
+        files: [
+        {expand: true, flatten: true, src: ['dist/index.html'], dest: 'dist/'}
+        ]
+      }
+    },
     watch: {
       compass: {
         files: ['<%= yeoman.app %>/_scss/**/*.{scss,sass}'],
@@ -34,8 +53,8 @@ module.exports = function (grunt) {
           baseurl: ''
         },
         files: [
-          '<%= yeoman.app %>/**/*.{html,yml,md,mkd,markdown}',
-          '!<%= yeoman.app %>/_bower_components/**/*'
+        '<%= yeoman.app %>/**/*.{html,yml,md,mkd,markdown}',
+        '!<%= yeoman.app %>/_bower_components/**/*'
         ],
         tasks: ['jekyll:server']
       },
@@ -44,10 +63,10 @@ module.exports = function (grunt) {
           livereload: '<%= connect.options.livereload %>'
         },
         files: [
-          '.jekyll/**/*.html',
-          '.tmp/css/**/*.css',
-          '{.tmp,<%= yeoman.app %>}/<%= js %>/**/*.js',
-          '<%= yeoman.app %>/img/**/*.{gif,jpg,jpeg,png,svg,webp}'
+        '.jekyll/**/*.html',
+        '.tmp/css/**/*.css',
+        '{.tmp,<%= yeoman.app %>}/<%= js %>/**/*.js',
+        '<%= yeoman.app %>/img/**/*.{gif,jpg,jpeg,png,svg,webp}'
         ]
       }
     },
@@ -62,9 +81,9 @@ module.exports = function (grunt) {
         options: {
           open: true,
           base: [
-            '.tmp',
-            '.jekyll',
-            '<%= yeoman.app %>'
+          '.tmp',
+          '.jekyll',
+          '<%= yeoman.app %>'
           ]
         }
       },
@@ -72,17 +91,17 @@ module.exports = function (grunt) {
         options: {
           open: true,
           base: [
-            '<%= yeoman.dist %>'
+          '<%= yeoman.dist %>'
           ]
         }
       },
       test: {
         options: {
           base: [
-            '.tmp',
-            '.jekyll',
-            'test',
-            '<%= yeoman.app %>'
+          '.tmp',
+          '.jekyll',
+          'test',
+          '<%= yeoman.app %>'
           ]
         }
       }
@@ -92,21 +111,21 @@ module.exports = function (grunt) {
         files: [{
           dot: true,
           src: [
-            '<%= yeoman.dist %>/*',
+          '<%= yeoman.dist %>/*',
             // Running Jekyll also cleans the target directory.  Exclude any
             // non-standard `keep_files` here (e.g., the generated files
             // directory from Jekyll Picture Tag).
-            '!<%= yeoman.dist %>/.git*'
-          ]
-        }]
-      },
-      server: [
-        '.tmp',
-        '.jekyll'
-      ]
-    },
-    compass: {
-      options: {
+'!<%= yeoman.dist %>/.git*'
+]
+}]
+},
+server: [
+'.tmp',
+'.jekyll'
+]
+},
+compass: {
+  options: {
         // If you're using global Sass gems, require them here.
         // require: ['singularity', 'jacket'],
         bundleExec: true,
@@ -258,10 +277,10 @@ module.exports = function (grunt) {
             //'_bower_components/jquery/jquery.js',
             //'favicon.ico',
             //'apple-touch*.png'
-          ],
-          dest: '<%= yeoman.dist %>'
-        }]
-      },
+            ],
+            dest: '<%= yeoman.dist %>'
+          }]
+        },
       // Copy CSS into .tmp directory for Autoprefixer processing
       stageCss: {
         files: [{
@@ -280,10 +299,10 @@ module.exports = function (grunt) {
       dist: {
         files: [{
           src: [
-            '<%= yeoman.dist %>/js/**/*.js',
-            '<%= yeoman.dist %>/css/**/*.css',
-            '<%= yeoman.dist %>/img/**/*.{gif,jpg,jpeg,png,svg,webp}',
-            '<%= yeoman.dist %>/fonts/**/*.{eot*,otf,svg,ttf,woff}'
+          '<%= yeoman.dist %>/js/**/*.js',
+          '<%= yeoman.dist %>/css/**/*.css',
+          '<%= yeoman.dist %>/img/**/*.{gif,jpg,jpeg,png,svg,webp}',
+          '<%= yeoman.dist %>/fonts/**/*.{eot*,otf,svg,ttf,woff}'
           ]
         }]
       }
@@ -304,9 +323,9 @@ module.exports = function (grunt) {
         reporter: require('jshint-stylish')
       },
       all: [
-        'Gruntfile.js',
-        '<%= yeoman.app %>/js/**/*.js',
-        'test/spec/**/*.js'
+      'Gruntfile.js',
+      '<%= yeoman.app %>/js/**/*.js',
+      'test/spec/**/*.js'
       ]
     },
     csslint: {
@@ -315,20 +334,20 @@ module.exports = function (grunt) {
       },
       check: {
         src: [
-          '<%= yeoman.app %>/css/**/*.css',
-          '<%= yeoman.app %>/_scss/**/*.scss'
+        '<%= yeoman.app %>/css/**/*.css',
+        '<%= yeoman.app %>/_scss/**/*.scss'
         ]
       }
     },
     concurrent: {
       server: [
-        'compass:server',
-        'copy:stageCss',
-        'jekyll:server'
+      'compass:server',
+      'copy:stageCss',
+      'jekyll:server'
       ],
       dist: [
-        'compass:dist',
-        'copy:dist'
+      'compass:dist',
+      'copy:dist'
       ]
     }
   });
@@ -345,7 +364,7 @@ module.exports = function (grunt) {
       'autoprefixer:server',
       'connect:livereload',
       'watch'
-    ]);
+      ]);
   });
 
   grunt.registerTask('server', function () {
@@ -366,7 +385,7 @@ module.exports = function (grunt) {
     'compass:server',
     'jshint:all',
     'csslint:check'
-  ]);
+    ]);
 
   grunt.registerTask('build', [
     'clean',
@@ -382,7 +401,8 @@ module.exports = function (grunt) {
     'svgmin',
     'filerev',
     'usemin',
-    'htmlmin'
+    'htmlmin',
+    'replace'
     ]);
 
   grunt.registerTask('deploy', [
@@ -396,5 +416,5 @@ module.exports = function (grunt) {
     'check',
     'test',
     'build'
-  ]);
+    ]);
 };
