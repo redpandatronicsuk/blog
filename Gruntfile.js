@@ -24,13 +24,13 @@ module.exports = function (grunt) {
       dist: {
         src: ['<%= yeoman.dist %>/index.html'],             // source files array (supports minimatch)
         overwrite: true,
-        replacements: 
+        replacements:
         [
         {
-           from: 'href=/',                   // string replacement
+           from: 'href=/',
            to: 'href=/blog/'
          }, {
-          from: 'src=/', 
+          from: 'src=/',
           to: 'src=/blog/'
         }
         ]
